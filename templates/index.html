@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='img/heartbeat-solid.png') }}">
+    <title>MediNep - All in one health solutions</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="#" class="logo"><i class="fas fa-heartbeat"></i>MediNep</a>
+      <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#doctors">Doctors</a>
+        <a href="#review">Review</a>
+        <a href="#blogs">Blogs</a>
+      </nav>
+      <div id="menu-btn" class="fas fa-bars"></div>
+      <!--O fas fa-bars cria o menu hamburger!-->
+    </header>
+    <section class="home" id="home">
+      <div class="image">
+        <img src="{{ url_for('static', filename='img/home-img.svg') }}" alt="" />
+      </div>
+      <div class="content" >
+        <h3>All in one health solution</h3>
+        <p>
+          Ensuring your well-being with 24/7 emergency medical services and 24-hour access to professional doctor consultations virtually and many more
+        </p>
+        <a href="/login" class="btn">
+         Get Started<span class="fas fa-chevron-right"></span>
+        </a>
+      </div>
+    </section>
+    <section class="icons-container" data-aos="fade-up"  data-aos-easing="ease-in-out" data-aos-duration="1000">
+      <div class="icons">
+        <i class="fas fa-user-md"></i>
+        <h3>0+</h3>
+        <p>Doctors at work</p>
+      </div>
+
+      <div class="icons">
+        <i class="fas fa-users"></i>
+        <h3>0+</h3>
+        <p>Satisfied patients</p>
+      </div>
+
+      <div class="icons">
+        <i class="fas fa-procedures"></i>
+        <h3>0+</h3>
+        <p>Life Saved</p>
+      </div>
+
+      <div class="icons">
+        <i class="fas fa-hospital"></i>
+        <h3>0+</h3>
+        <p>Available hospitals</p>
+      </div>
+    </section>
+
+    <section class="services" id="services" data-aos="fade-up"  data-aos-easing="ease-in-out" data-aos-duration="1000">
+      <h1 class="heading">our <span>services</span></h1>
+      <div class="box-container">
+        <div class="box" data-aos="fade-up"  data-aos-easing="ease-in-out" data-aos-duration="1000">
+          <i class="fas fa-user-md"></i>
+          <h3>Expert doctors</h3>
+          <p>
+            24-hour access to professional doctor consultations virtually
+          </p>
+          <a href="/login" class="btn">
+            Learn more <span class="fas fa-chevron-right"></span>
+          </a>
+        </div>
+        <div class="box" data-aos="fade-up"  data-aos-easing="ease-in-out" data-aos-duration="1000">
+          <i class="fas fa-ambulance"></i>
+          <h3>24/7 ambulance</h3>
+          <p>
+            24/7 ambulance service is just a call away, providing immediate assistance
+          </p>
+          <a href="/login" class="btn">
+            Learn more <span class="fas fa-chevron-right"></span>
+          </a>
+        </div>
+        <div class="box" data-aos="fade-up"  data-aos-easing="ease-in-out" data-aos-duration="1000">
+          <i class="fas fa-pills"></i>
+          <h3>medicines</h3>
+          <p>
+            convenience of 24/7 medicine ordering with doorstep delivery
+          </p>
+          <a href="/login" class="btn">
+            Learn more <span class="fas fa-chevron-right"></span>
+          </a>
+        </div>
+        <div class="box" data-aos="fade-up"  data-aos-easing="ease-in-out" data-aos-duration="1000">
+          <i class="fas fa-notes-medical"></i>
+          <h3>SwiftQueue</h3>
+          <p>
+            Your Personalized Turn Tracker System for Hassle-Free Doctor Appointments
+          </p>
+          <a href="/login" class="btn">
+            Learn more <span class="fas fa-chevron-right"></span>
+          </a>
+        </div>
+
+        
+
+       
+
+        <div class="box" data-aos="fade-up"  data-aos-easing="ease-in-out" data-aos-duration="1000">
+          <i class="fas fa-procedures"></i>
+          <h3>Courses</h3>
+          <p>
+            Broaden your knowledge from our premium courses
+          </p>
+          <a href="/login" class="btn">
+            Learn more <span class="fas fa-chevron-right"></span>
+          </a>
+        </div>
+
+        <div class="box" data-aos="fade-up"  data-aos-easing="ease-in-out" data-aos-duration="1000">
+          <i class="fas fa-heartbeat"></i>
+          <h3>Total care</h3>
+          <p>
+            Your Dedicated Health and Wellness Companion
+          </p>
+          <a href="/login" class="btn">
+            Learn more <span class="fas fa-chevron-right"></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about" data-aos="fade-up"  data-aos-easing="ease-in-out" data-aos-duration="1000">
+      <h1 class="heading">About <span>us</span></h1>
+      <div class="row">
+        <div class="image">
+          <img src="{{ url_for('static', filename='img/book-img.svg') }}" alt="" />
+        </div>
+        <div class="content" data-aos="fade-up"  data-aos-easing="ease-in-out" data-aos-duration="1000">
+          <h3>we take care of your healthy life</h3>
+          <p>
+            Welcome to MediNep, where we prioritize your well-being through innovative healthcare services. Our platform offers virtual consultations with qualified doctors, allowing you to access expert advice conveniently from home. Navigate the world of pharmaceuticals effortlessly with our information and purchase system for medicines. 
+          </p>
+          <p>
+            Learn about medications, their uses, and make secure online purchases. Additionally, our 24/7 ambulance service ensures prompt assistance during medical emergencies.
+          </p>
+          <a href="/login" class="btn">
+            Learn more <span class="fas fa-chevron-right"></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="doctors" id="doctors" data-aos="fade-up"  data-aos-easing="ease-in-out" data-aos-duration="1000">
+      <h1 class="heading">our <span>doctors</span></h1>
+      <div class="box-container" data-aos="fade-up"  data-aos-easing="ease-in-out" data-aos-duration="1000">
+        <div class="box" data-aos="fade-up"  data-aos-easing="ease-in-out" data-aos-duration="1000">
+          <img src="{{ url_for('static', filename='img/doctor0.png') }}" alt="" />
+          <h3>Siddarth Lal Poudel</h3>
+          <span>Orthopedic Surgeon</span>
+          <div class="share">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-linkedin"></a>
+          </div>
+        </div>
+
+        <div class="box" data-aos="fade-up"  data-aos-easing="ease-in-out" data-aos-duration="1000">
+          <img src="{{ url_for('static', filename='img/doctor1.png') }}" alt="" />
+          <h3>Meena Kafle</h3>
+          <span>Gynecologist</span>
+          <div class="share">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-linkedin"></a>
+          </div>
+        </div>
+
+        <div class="box" data-aos="fade-up"  data-aos-easing="ease-in-out" data-aos-duration="1000">
+          <img src="{{ url_for('static', filename='img/doctor2.png') }}" alt="" />
+          <h3> Suraj tamrakar</h3>
+          <span>Cardiologist</span>
+          <div class="share">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-linkedin"></a>
+          </div>
+        </div>
+
+        <div class="box" data-aos="fade-up"  data-aos-easing="ease-in-out" data-aos-duration="1000" >
+          <img src="{{ url_for('static', filename='img/doctor3.png') }}" alt="" />
+          <h3>Ravi Gautam</h3>
+          <span>Dermatologist</span>
+          <div class="share">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-linkedin"></a>
+          </div>
+        </div>
+
+        <div class="box" data-aos="fade-up"  data-aos-easing="ease-in-out" data-aos-duration="1000">
+          <img src="{{ url_for('static', filename='img/doctor4.png') }}" alt="" />
+          <h3>Achala Vaidya</h3>
+          <span>Neurosurgery</span>
+          <div class="share">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-linkedin"></a>
+          </div>
+        </div>
+
+        <div class="box" data-aos="fade-up"  data-aos-easing="ease-in-out" data-aos-duration="1000">
+          <img src="{{ url_for('static', filename='img/doctor5.png') }}" alt="" />
+          <h3>Darsheel Piya</h3>
+          <span>neurosurgeon</span>
+          <div class="share">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-linkedin"></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="review" id="review" data-aos="fade-up"  data-aos-easing="ease-in-out" data-aos-duration="1000">
+      <h1 class="heading">client's <span>review</span></h1>
+      <div class="box-container" data-aos="fade-up"  data-aos-easing="ease-in-out" data-aos-duration="1000">
+        <div class="box">
+          <img src="{{ url_for('static', filename='img/review2.png') }}" alt="" />
+          <h3>Diya Shrestha</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <p class="text">
+            "There is really large market in the health sector in nepal and Local Language Support is really awsome."
+          </p>
+        </div>
+
+        <div class="box">
+          <img src="{{ url_for('static', filename='img/review1.png') }}" alt="" />
+          <h3>Himal Pandey</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <p class="text">
+          In aiding individuals residing in remote regions with online connectivity yet facing challenges in real-time medical consultations, this initiative proves exceptionally beneficial."
+          </p>
+        </div>
+
+        <div class="box">
+          <img src="{{ url_for('static', filename='img/review3.png') }}" alt="" />
+          <h3>Bishal Amatya</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <p class="text">
+            "The feature of directly connecting with the live doctor is really unique."
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="blogs" id="blogs">
+      <h1 class="heading">our <span>blogs</span></h1>
+      <div class="box-container">
+        <div class="box">
+          <div class="image">
+            <img src="{{ url_for('static', filename='img/blog-1.jpg') }}" alt="" />
+          </div>
+          <div class="content">
+            <div class="icon">
+              <a href="#"> <i class="fas fa-calendar"></i> 1st may, 2021</a>
+              <a href="#"> <i class="fas fa-user"></i> by admin</a>
+            </div>
+            <h3>blog title goes here</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Cupiditate, tenetur?
+            </p>
+            <a href="#" class="btn"
+              >learn more <span class="fas fa-chevron-right"></span
+            ></a>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="image">
+            <img src="{{ url_for('static', filename='img/blog-2.jpg') }}" alt="" />
+          </div>
+          <div class="content">
+            <div class="icon">
+              <a href="#"> <i class="fas fa-calendar"></i> 1st may, 2021</a>
+              <a href="#"> <i class="fas fa-user"></i> by admin</a>
+            </div>
+            <h3>blog title goes here</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Cupiditate, tenetur?
+            </p>
+            <a href="#" class="btn"
+              >learn more <span class="fas fa-chevron-right"></span
+            ></a>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="image">
+            <img src="{{ url_for('static', filename='img/blog-3 (1).jpg') }}" alt="" />
+          </div>
+          <div class="content">
+            <div class="icon">
+              <a href="#"> <i class="fas fa-calendar"></i> 1st may, 2021</a>
+              <a href="#"> <i class="fas fa-user"></i> by admin</a>
+            </div>
+            <h3>blog title goes here</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Cupiditate, tenetur?
+            </p>
+            <a href="#" class="btn"
+              >learn more <span class="fas fa-chevron-right"></span
+            ></a>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <section class="footer" data-aos="fade-up"  data-aos-easing="ease-in-out" data-aos-duration="1000">
+      <div class="box-container">
+        <div class="box">
+          <h3>quick links</h3>
+          <a href="#home"> <i class="fas fa-chevron-right"></i> Home </a>
+          <a href="#services"> <i class="fas fa-chevron-right"></i> Services </a>
+          <a href="#about"> <i class="fas fa-chevron-right"></i> About </a>
+          <a href="#doctors"> <i class="fas fa-chevron-right"></i> Doctors </a>
+          <a href="#review"> <i class="fas fa-chevron-right"></i> Review </a>
+          <a href="#blogs"> <i class="fas fa-chevron-right"></i> Blogs </a>
+        </div>
+        <div class="box">
+          <h3>our services</h3>
+          <a href="/login"> <i class="fas fa-chevron-right"></i> Expert Doctors </a>
+          <a href="/login"> <i class="fas fa-chevron-right"></i> 24/7 Ambulance </a>
+          <a href="/login"> <i class="fas fa-chevron-right"></i> Medicines </a>
+          <a href="/login"> <i class="fas fa-chevron-right"></i> SwiftQueue </a>
+          <a href="/login">
+            <i class="fas fa-chevron-right"></i> Courses
+          </a>
+          <a href="#"> <i class="fas fa-chevron-right"></i> Courses </a>
+        </div>
+
+        <div class="box">
+          <h3>Contact info</h3>
+          <a href="#"> <i class="fas fa-phone"></i> +977 000-0000</a>
+          <a href="#"> <i class="fas fa-phone"></i> +977 000-1111</a>
+          <a href="#"> <i class="fas fa-envelope"></i> xyz@gmail.com</a>
+          <a href="#"> <i class="fas fa-envelope"></i> xyz@gmail.com</a>
+          <a href="#">
+            <i class="fas fa-map-marker-alt"></i> Bharatpur - 7 , Chitwan
+          </a>
+        </div>
+
+        <div class="box">
+          <h3>Follow us</h3>
+          <a href="#"> <i class="fab fa-facebook-f"></i> facebook</a>
+          <a href="#"> <i class="fab fa-twitter"></i> twitter</a>
+          <a href="#"> <i class="fab fa-instagram"></i> instagram</a>
+          <a href="#"> <i class="fab fa-linkedin"></i> linkedin</a>
+          <a href="#"> <i class="fab fa-pinterest"></i> pinterest</a>
+        </div>
+      </div>
+
+    </section>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='img/heartbeat-solid.png') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/hotline.css') }}">
+    <title>Dashboard | MediNep | All in one health solution</title>
+</head>
+<body>
+    
+    <header>
+        <h1>Nearest Ambulances Available</h1>
+    </header>
+    <section>
+        <div class="service" onclick="callNumber('9844209631')">
+            <img src="{{ url_for('static', filename='img/ambulance.png') }}" alt="Ambulance">
+            <h2>Ambulance 1</h2>
+            <p>9844209631</p>
+        </div>
+        <div class="service" onclick="callNumber('+056-493401')">
+            <img src="{{ url_for('static', filename='img/ambulance.png') }}" alt="Ambulance">
+            <h2>Ambulance 2</h2>
+            <p>+056-493401</p>
+        </div>
+        <div class="service" onclick="callNumber('+056-493514')">
+            <img src="{{ url_for('static', filename='img/ambulance.png') }}" alt="Ambulance">
+            <h2>Ambulance 3</h2>
+            <p>+056-493514</p>
+        </div>
+        <div class="service" onclick="callNumber('+056-493817')">
+            <img src="{{ url_for('static', filename='img/ambulance.png') }}" alt="Ambulance">
+            <h2>Ambulance 4</h2>
+            <p>+056-493817</p>
+        </div>
+
+    </section>
+</body>
+<script>
+    function callNumber(number) {
+        // Open a popup indicating that the number is being called
+        var confirmation = confirm('Calling ' + number + '. Confirm call?');
+
+        // Perform additional actions based on user confirmation
+        if (confirmation) {
+            // Replace the alert with actual phone call functionality using appropriate APIs
+            alert('Call initiated to ' + number);
+        } else {
+            alert('Call canceled');
+        }
+    }
+</script>
+</html>

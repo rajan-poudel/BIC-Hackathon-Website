@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='img/heartbeat-solid.png') }}">
+    <title>MediNep - All in one health solutions</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/medicine.css') }}" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <main>
+
+      <!--Woman collection section-->
+      <section id="products" class="container mt-5">
+        <h1>Medicine</h1>
+         
+        <div class="container mt-3">
+          <input type="text" class="form-control" placeholder="Search Medicine...">
+          <button type="button" class="btn btn-primary mt-2" onclick= searchMedicine()>Search</button>
+        </div>
+
+
+        <div class="row row-cols-1 row-cols-md-3 g-4 mt-3">
+          <div class="col">
+            <div class="card h-100 penguin-card-border shadow rounded">
+              <img
+                src="{{ url_for('static', filename='img/aspirin.jpg') }}"
+                class="card-img-top penguin-card-img w-75"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Aspirin (Acetylsalicylic Acid)</h5>
+                <p class="card-text">
+                  Health Issue: Pain relief, fever reduction, anti-inflammatory.
+                  <br>Common Uses: Headaches, muscle pain, inflammation, fever.
+                </p>
+              </div>
+              <div
+                class="card-footer d-flex justify-content-between align-items-center penguin-card-footer"
+              >
+                <div>
+                  <h3 class="price-text-style">Rs.350/box</h3>
+                </div>
+                <div>
+                  <button type="button" class="btn penguin-btn">
+                    
+                    <i class="fa fa-shopping-cart"></i> <a href="/medicine-payment">BUY NOW</a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 penguin-card-border shadow rounded">
+              <img
+                src="{{ url_for('static', filename='img/ibuprofen.webp') }}"
+                class="card-img-top penguin-card-img w-75"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Ibuprofen</h5>
+                <p class="card-text">
+                  Health Issue: Nonsteroidal anti-inflammatory drug (NSAID).
+                  <br>Common Uses: Pain relief, inflammation reduction, fever reduction.
+                </p>
+              </div>
+              <div
+                class="card-footer d-flex justify-content-between align-items-center penguin-card-footer"
+              >
+                <div>
+                  <h3 class="price-text-style">Rs 35/15 Tablet(s) in a Strip</h3>
+                </div>
+                <div>
+                  <button type="button" class="btn penguin-btn">
+                    <i class="fa fa-shopping-cart"></i> <a href="/medicine-payment">BUY NOW</a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 penguin-card-border shadow rounded">
+              <img
+                src="{{ url_for('static', filename='img/loratad.jpg') }}"
+                class="card-img-top penguin-card-img w-75"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Loratadine (Claritin)</h5>
+                <p class="card-text">
+                  Health Issue: Antihistamine.
+                  <br>Common Uses: Allergy symptoms, such as sneezing, runny nose, itching.
+                </p>
+              </div>
+              <div
+                class="card-footer d-flex justify-content-between align-items-center penguin-card-footer"
+              >
+                <div>
+                  <h3 class="price-text-style">Rs 70 per 10 Tablet(s) in a Strip</h3>
+                </div>
+                <div>
+                  <button type="button" class="btn penguin-btn">
+                    <i class="fa fa-shopping-cart"></i> <a href="/medicine-payment">BUY NOW</a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--Men collection section-->
+      <section class="container mt-5">
+        <div class="row row-cols-1 row-cols-md-3 g-4 mt-3">
+          <div class="col">
+            <div class="card h-100 penguin-card-border shadow rounded">
+              <img
+                src="{{ url_for('static', filename='img/dolopar.png') }}"
+                class="card-img-top penguin-card-img w-75"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Acetaminophen (Paracetamol)</h5>
+                <p class="card-text">
+                  Health Issue: Analgesic (pain reliever), antipyretic (fever reducer).
+                  <br>Common Uses: Pain relief, fever reduction.
+                </p>
+              </div>
+              <div
+                class="card-footer d-flex justify-content-between align-items-center penguin-card-footer"
+              >
+                <div>
+                  <h3 class="price-text-style">Rs 72 per 15 Tablet(s) in a strip</h3>
+                </div>
+                <div>
+                  <button type="button" class="btn penguin-btn">
+                    <i class="fa fa-shopping-cart"></i> <a href="/medicine-payment">BUY NOW</a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 penguin-card-border shadow rounded">
+              <img
+                src="{{ url_for('static', filename='img/t3.jpg') }}"
+                class="card-img-top penguin-card-img w-75"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Levothyroxine (Synthroid)</h5>
+                <p class="card-text">
+                  Health Issue: Thyroid hormone replacement.
+                  <br>Common Uses: Hypothyroidism.
+                </p>
+              </div>
+              <div
+                class="card-footer d-flex justify-content-between align-items-center penguin-card-footer"
+              >
+                <div>
+                  <h3 class="price-text-style">Rs 125 per 10 Tablet(s)</h3>
+                </div>
+                <div>
+                  <button type="button" class="btn penguin-btn">
+                    <i class="fa fa-shopping-cart"></i> <a href="/medicine-payment">BUY NOW</a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 penguin-card-border shadow rounded">
+              <img
+                src="{{ url_for('static', filename='img/nemox.jpg') }}"
+                class="card-img-top penguin-card-img w-75"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Amoxicillin</h5>
+                <p class="card-text">
+                  Health Issue: Antibiotic.
+                  <br>Common Uses: Bacterial infections.
+                </p>
+              </div>
+              <div
+                class="card-footer d-flex justify-content-between align-items-center penguin-card-footer"
+              >
+                <div>
+                  <h3 class="price-text-style">Rs 110</h3>
+                </div>
+                <div>
+                  <button type="button" class="btn penguin-btn">
+                    <i class="fa fa-shopping-cart"></i> <a href="/medicine-payment">BUY NOW</a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--Some information section-->
+    </main>
+
+    <!--Footer section-->
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script>
+      function searchMedicine() {
+        // Get input value
+        var searchInput = document.getElementById("medicineSearch").value.toUpperCase();
+
+        // Get all medicine cards
+        var medicineCards = document.getElementById("medicineList").getElementsByClassName("card");
+
+        // Loop through all cards
+        for (var i = 0; i < medicineCards.length; i++) {
+          var cardTitle = medicineCards[i].getElementsByClassName("card-title")[0].innerText.toUpperCase();
+
+          // Show or hide card based on search
+          if (cardTitle.includes(searchInput)) {
+            medicineCards[i].style.display = "";
+          } else {
+            medicineCards[i].style.display = "none";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

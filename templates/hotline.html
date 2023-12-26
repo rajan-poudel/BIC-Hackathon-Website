@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | MediNep | All in one health solution</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/hotline.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='img/heartbeat-solid.png') }}">
+</head>
+
+<body>
+
+    <header>
+        <h1>Nepal Emergency Services</h1>
+    </header>
+
+    <section>
+        <div class="service" onclick="callNumber('102')">
+            <img src="{{ url_for('static', filename='img/ambulance.png') }}" alt="Ambulance">
+            <h2>Ambulance</h2>
+            <p>102</p>
+        </div>
+
+        <div class="service" onclick="callNumber('101')">
+            <img src="{{ url_for('static', filename='img/firefighter.png') }}" alt="Firefighters">
+            <h2>Firefighters</h2>
+            <p>101</p>
+        </div>
+
+        <div class="service" onclick="callNumber('102')">
+            <img src="{{ url_for('static', filename='img/police.png') }}" alt="Police Emergency">
+            <h2>Police Emergency</h2>
+            <p>100</p>
+        </div>
+
+        <div class="service" onclick="callNumber('112')">
+            <img src="{{ url_for('static', filename='img/rescuser.png') }}" alt="Search and Rescue Team">
+            <h2>Search and Rescue Team</h2>
+            <p>112</p>
+        </div>
+
+        <div class="service" onclick="callNumber('118')">
+            <img src="{{ url_for('static', filename='img/natural.png') }}" alt="Natural Disaster Hotline">
+            <h2>Natural Disaster Hotline</h2>
+            <p>118</p>
+        </div>
+
+        <div class="service" onclick="callNumber('103')">
+            <img src="{{ url_for('static', filename='img/traffic.png') }}" alt="Traffic Police Control">
+            <h2>Traffic Police Control</h2>
+            <p>103</p>
+        </div>
+
+        <div class="service" onclick="callNumber('16600102024')">
+            <img src="{{ url_for('static', filename='img/medical.png') }}" alt="Medical Helpline">
+            <h2>Medical Helpline</h2>
+            <p>16600102024</p>
+        </div>
+
+        <div class="service" onclick="callNumber('1144')">
+            <img src="{{ url_for('static', filename='img/tourist.png') }}" alt="Tourist Police">
+            <h2>Tourist Police</h2>
+            <p>1144</p>
+        </div>
+
+        <div class="service" onclick="callNumber('1098')">
+            <img src="{{ url_for('static', filename='img/child.png') }}" alt="Child Helpline">
+            <h2>Child Helpline</h2>
+            <p>1098</p>
+        </div>
+
+        <div class="service" onclick="callNumber('1091')">
+            <img src="{{ url_for('static', filename='img/women.png') }}" alt="Women's Helpline">
+            <h2>Women's Helpline</h2>
+            <p>1091</p>
+        </div>
+
+        
+        <div class="service" onclick="callNumber('01-4482484')">
+            <img src="{{ url_for('static', filename='img/poison.png') }}" alt="Poison Control Center">
+            <h2>Poison Control Center</h2>
+            <p>01-4482484</p>
+        </div>
+
+        <div class="service" onclick="callNumber('115')">
+            <img src="{{ url_for('static', filename='img/electricity.png') }}" alt="Electricity Emergency">
+            <h2>Electricity Emergency</h2>
+            <p>115</p>
+        </div>
+
+        <div class="service" onclick="callNumber('4426688')">
+            <img src="{{ url_for('static', filename='img/water.png') }}" alt="Water Supply Emergency">
+            <h2>Water Supply Emergency</h2>
+            <p>4426688</p>    
+        </div>
+
+        <div class="service" onclick="callNumber('104')">
+            <img src="{{ url_for('static', filename='img/gas.png') }}" alt="Natural Gas Leakage">
+            <h2>Natural Gas Leakage</h2>
+            <p>104</p>
+        </div>
+
+        <div class="service" onclick="callNumber('16600119756')">
+            <img src="{{ url_for('static', filename='img/hiv.png') }}" alt="HIV/AIDS Helpline">
+            <h2>HIV/AIDS Helpline</h2>
+            <p>16600119756</p>
+        </div>
+
+        <div class="service" onclick="callNumber('1099')">
+            <img src="{{ url_for('static', filename='img/domestic.png') }}" alt="Domestic Violence Helpline">
+            <h2>Domestic Violence Helpline</h2>
+            <p>1099</p>
+        </div>
+
+        <div class="service" onclick="callNumber('104')">
+            <img src="{{ url_for('static', filename='img/road.png') }}" alt="Road Accident Emergency">
+            <h2>Road Accident Emergency</h2>
+            <p>104</p>
+        </div>
+
+        <div class="service" onclick="callNumber('16600198484')">
+            <img src="{{ url_for('static', filename='img/mental.png') }}" alt="Mental Health Helpline">
+            <h2>Mental Health Helpline</h2>
+            <p>16600198484</p>
+        </div>
+
+        <div class="service" onclick="callNumber('01-4106022')">
+            <img src="{{ url_for('static', filename='img/animal.png') }}" alt="Animal Rescue Service">
+            <h2>Animal Rescue Service</h2>
+            <p>01-4106022</p>
+        </div>
+    </section>
+
+    <script>
+        function callNumber(number) {
+            // Open a popup indicating that the number is being called
+            var confirmation = confirm('Calling ' + number + '. Confirm call?');
+
+            // Perform additional actions based on user confirmation
+            if (confirmation) {
+                // Replace the alert with actual phone call functionality using appropriate APIs
+                alert('Call initiated to ' + number);
+            } else {
+                alert('Call canceled');
+            }
+        }
+    </script>
+</body>
+</html>

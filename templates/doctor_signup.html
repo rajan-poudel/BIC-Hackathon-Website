@@ -1,0 +1,50 @@
+<!-- HTML code for the doctor signup form -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/doctor-signup.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='img/heartbeat-solid.png') }}">
+    <title>Dashboard | MediNep | All in one health solution</title>
+</head>
+
+<body>
+    <form id="doctorSignupForm" action="/doctor-signup-procced" method="post">
+        <!-- Name input -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <!-- Email input -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <!-- Password input -->
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <!-- University input -->
+        <label for="university">University:</label>
+        <input type="text" id="university" name="University" required>
+
+        <!-- Batch input -->
+        <label for="batch">Batch:</label>
+        <input type="text" id="batch" name="Batch" required>
+
+        <!-- Field of Expertise input -->
+        <label for="field">Field:</label>
+        <input type="text" id="field" name="Field" required>
+
+        <!-- File upload for degree or certificate -->
+        <label for="fileUpload">Upload Degree/Certificate:</label>
+        <input type="file" id="fileUpload" name="fileUpload" accept=".pdf, .doc, .docx, .png, .jpg, .jpeg" required>
+
+        <!-- Additional fields can be added here -->
+
+        <!-- Submit button -->
+        <button type="submit">Signup</button>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,120 @@
+<html>
+<head>
+<style>
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes dots {
+  0% {
+    content: "--";
+  }
+  20% {
+    content: "----------";
+  }
+  33% {
+    content: "--------------------";
+  }
+  50%{
+    content: "----------------------------------------";
+  }
+  66% {
+    content: "------------------------------------------------------------";
+  }
+  100% {
+    content: "--------";
+  }
+}
+
+h1 {
+  font-family: Arial, sans-serif;
+  font-size: 36px;
+  color: white;
+  text-align: center;
+  margin-top: 100px;
+}
+
+p {
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+  animation: slideInLeft 2s ease-in-out;
+}
+
+p:after {
+  content: "";
+  animation: dots 1s infinite;
+}
+
+body {
+  background: linear-gradient(to right, #1bdbb5, #16a085);
+}
+/* CSS */
+.button-34 {
+  background: #5E5DF0;
+  border-radius: 999px;
+  box-shadow: #5E5DF0 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 8px 18px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
+}
+a:link {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+a:active {
+  text-decoration: none;
+  color: yellow;
+}
+.button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+</style>
+</head>
+<body>
+    <div class="container">
+
+        <h1>Your order is  placed</h1>
+        <p></p>
+    </div>
+    <!-- HTML !-->
+    <div class="button">
+
+      <button class="button-34" role="button"><a href="/home">Return Back</a></button>
+    </div>
+</body>
+</html>
+

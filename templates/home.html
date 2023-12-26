@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='img/heartbeat-solid.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <style>
+#google_translate_element {
+  color: transparent;
+}
+#google_translate_element a {
+  display: none;
+}
+div.goog-te-gadget {
+  color: transparent !important;
+}
+    </style>
+    <title>Dashboard | MediNep | All in one health solution</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Sidebar Section -->
+        <aside>
+            <div class="toggle">
+                <div class="logo">
+                    <img src="{{ url_for('static', filename='img/heartbeat-solid.png') }}">
+                    <h2>Medi<span class="danger">Nep</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">
+                        close
+                    </span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="\home" class="active">
+                    <span class="material-icons-sharp notranslate">
+                        dashboard
+                    </span>
+                    <h3>Home</h3>
+                </a>
+                <a href="\registration">
+                    <span class="material-icons-sharp notranslate">
+                        person_outline
+                    </span>
+                    <h3>Doctor</h3>
+                </a>
+                <a href="\medicine">
+                    <span class="material-icons-sharp notranslate">
+                        receipt_long
+                    </span>
+                    <h3>Medicine</h3>
+                </a>
+                <a href="/turn-tracker">
+                    <span class="material-icons-sharp notranslate">
+                        access_time
+                    </span>
+                    <h3>Turn Tracker</h3>
+                </a>
+                
+                 <a href="/searching-ambulance">
+                    <span class="material-icons-sharp notranslate">
+                        local_hospital
+                    </span>
+                    <h3>Ambulance</h3>
+                </a>
+                <a href="/hotline">
+                    <span class="material-icons-sharp notranslate">
+                        phone
+                    </span>
+                    <h3>HotlineCalls</h3>
+                </a>
+                <a href="/courses">
+                    <span class="material-icons-sharp notranslate">
+                        book
+                    </span>
+                    <h3>Courses</h3>
+                </a>
+                <a href="/setting">
+                    <span class="material-icons-sharp notranslate">
+                        settings
+                    </span>
+                    <h3>Settings</h3>
+                </a>
+            
+                <a href="/logout">
+                    <span class="material-icons-sharp notranslate">
+                        logout
+                    </span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+        <!-- End of Sidebar Section -->
+
+        <!-- Main Content -->
+        <main>
+            <br>
+            <br>
+            <br>
+            <h1 >Our Services</h1>
+            <br>
+            <br>
+
+            
+            <!-- Analyses -->
+            <div class="analyse">
+                <div class="visits">
+                    <div class="status">
+                        <div class="info">
+                            <a href="\registration">
+                            <i class="fa-solid fa-user-doctor fa-2xl"></i>
+                            <h1>Connect with Doctor</h1>
+                                                            
+                        </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="sales">
+                    <div class="status">
+                        <div class="info" >
+                            <a href="\medicine">
+                                <i class="fa-solid fa-tablets fa-2xl"></i>
+                                <h1>Buy Medicine</h1>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="visits">
+                    <div class="status">
+                        <div class="info">
+                            <a href="/turn-tracker">
+                            <i class="fa-solid fa-clock fa-2xl"></i>
+                            <h1>Turn Tracker</h1>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="searches">
+                    <div class="status">
+                        <div class="info">
+                            <a href="/searching-ambulance">
+                            <i class="fa-solid fa-truck-medical fa-2xl"></i>
+                            <h1>Call An Ambulance</h1>
+                        </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="visits">
+                    <div class="status">
+                        <div class="info">
+                            <a href="\hotline">
+                            <i class="fa-solid fa-phone fa-2xl"></i>
+                            <h1>Hotline Calls</h1>
+                        </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="visits">
+                    <div class="status">
+                        <div class="info">
+                            <a href="\courses">
+                            <i class="fa-solid fa-book fa-2xl"></i>
+                            <h1>Courses</h1>
+                        </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Analyses -->
+
+            <!-- New Users Section -->
+           
+            <!-- End of New Users Section -->
+
+            <!-- Recent Orders Table -->
+           
+            <!-- End of Recent Orders -->
+
+        </main>
+        <!-- End of Main Content -->
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <div class="nav">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">
+                        menu
+                    </span>
+                </button>
+                <div class="dark-mode">
+                    <span class="material-icons-sharp active notranslate">
+                        light_mode
+                    </span>
+                    <span class="material-icons-sharp notranslate" >
+                        dark_mode
+                    </span>
+                </div>
+                <div id="google_translate_element"></div>
+
+            </div>
+            <!-- End of Nav -->
+
+           
+
+            <div class="reminders">
+                <div class="header">
+                    <h2>History</h2>
+                    <span class="material-icons-sharp notranslate">
+                        notifications_none
+                    </span>
+                </div>
+
+                <div class="notification">
+                    <div class="icon">
+                        <span class="material-icons-sharp">
+                            date_range
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>Appointment</h3>
+                            <small class="text_muted">
+                                08:00 AM
+                            </small>
+                        </div>
+                        <span class="material-icons-sharp">
+                            more_vert
+                        </span>
+                    </div>
+                </div>
+
+                <div class="notification deactive">
+                    <div class="icon">
+                        <span class="material-icons-sharp notranslate">
+                            phone
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>Called an ambulance</h3>
+                            <small class="text_muted">
+                                12:00 PM
+                            </small>
+                        </div>
+                        <span class="material-icons-sharp">
+                            more_vert
+                        </span>
+                    </div>
+                    
+                </div>
+                <div class="notification">
+                    <div class="icon">
+                        <span class="material-icons-sharp">
+                            date_range
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>Appointment</h3>
+                            <small class="text_muted">
+                                08:00 AM
+                            </small>
+                        </div>
+                        <span class="material-icons-sharp">
+                            more_vert
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="notification deactive">
+                    <div class="icon">
+                        <span class="material-icons-sharp notranslate">
+                            phone
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>Called an ambulance</h3>
+                            <small class="text_muted">
+                                3:00 PM
+                            </small>
+                        </div>
+                        <span class="material-icons-sharp">
+                            more_vert
+                        </span>
+                    </div>
+                    
+                </div>
+                <br>
+                <br>
+                <div class="header">
+                    <h2>Remainders</h2>
+                </div>
+
+                <div class="notification">
+                    <div class="icon">
+                        <span class="material-icons-sharp">
+                            date_range
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>Appointment</h3>
+                            <small class="text_muted">
+                                08:00 AM
+                            </small>
+                        </div>
+                        <span class="material-icons-sharp">
+                            more_vert
+                        </span>
+                    </div>
+                </div>
+
+                <div class="notification add-reminder">
+                    <div>
+                        <span class="material-icons-sharp notranslate">
+                            add
+                        </span>
+                        <h3>Add Reminder</h3>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+    <iframe
+src="https://www.chatbase.co/chatbot-iframe/JEwUdBcwxQqvgGZ8YlzDV"
+width="100%"
+style="height: 100%; min-height: 700px"
+frameborder="0"
+></iframe>
+<script>
+    window.embeddedChatbotConfig = {
+    chatbotId: "JEwUdBcwxQqvgGZ8YlzDV",
+    domain: "www.chatbase.co"
+    }
+    </script>
+    <script
+    src="https://www.chatbase.co/embed.min.js"
+    chatbotId="JEwUdBcwxQqvgGZ8YlzDV"
+    domain="www.chatbase.co"
+    defer>
+    </script>
+    <script src="{{ url_for('static', filename='js/home.js') }}"></script>
+    <script>
+       function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+        { pageLanguage: 'en', exclude: ['.notranslate'] },
+        'google_translate_element'
+    );
+}
+      </script>
+</body>
+
+</html>

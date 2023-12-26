@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='img/heartbeat-solid.png') }}">
+   <title>MediNep - All in one health solutions</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/otp-verify.css') }}" />
+    <!-- Boxicons CSS -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+   <script src="{{ url_for('static', filename='js/otp-verify.js') }}" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <i class="bx bxs-check-shield"></i>
+      </header>
+      <h4>Enter OTP Code</h4>
+      <form action="/otp-proceed" method="post">
+        <div class="input-field">
+          <input type="number" name="num1" required/>
+          <input type="number" name="num2" disabled required/>
+          <input type="number" name="num3" disabled />
+          <input type="number" name="num4" disabled required />
+        </div>
+        <button>Verify OTP</button>
+      </form>
+    </div>
+  </body>
+</html>

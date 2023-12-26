@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='img/heartbeat-solid.png') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/hotline.css') }}">
+    <title>Dashboard | MediNep | All in one health solution</title>
+    <style>
+        a:link {
+  text-decoration: none;
+  color: white;
+}
+
+a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+a:active {
+  text-decoration: none;
+  color: yellow;
+}
+    </style>
+</head>
+<body>
+    
+    <header>
+        <h1>Courses</h1>
+    </header>
+    <section>
+        <a href="https://www.coursera.org/learn/epidemics">
+        <div class="service">
+            <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera-course-photos/8e/843ecf485e4a40259959487a21660b/infectiousdisease-MOOC.png?auto=format%2Ccompress%2C%20enhance&dpr=1&w=265&h=216&fit=crop&q=50" alt="Ambulance">
+            <h2>Epidemics - the Dynamics of Infectious Diseases</h2>
+            <p>Skills you'll gain: <b>Epidemiology</b></p>
+            <p>The Pennsylvania State University</p>
+        </div>
+    </a>
+    <a href="https://www.coursera.org/learn/virology-epidemiology">
+        <div class="service">
+            <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera-course-photos/8c/356a2b167b47d1ada9531e03ad2856/coursera_virology_1200x1200.jpg?auto=format%2Ccompress%2C%20enhance&dpr=1&w=265&h=216&q=50&fit=crop" alt="Ambulance">
+            <h2>Virology and Epidemiology in the Time of COVID-19</h2>
+            <p>Skills you'll gain: <b>Epidemiology</b></p>
+            <p>American Museum of Natural History</p>
+        </div>
+    </a>
+    <a href="https://www.coursera.org/learn/hkuepidemics">
+        <div class="service">
+            <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera-course-photos/85/75a340730811e5acd8bfe64a96087e/hku01x-course_image-378x225a.png?auto=format%2Ccompress%2C%20enhance&dpr=1&w=265&h=216&fit=crop&q=50" alt="Ambulance">
+            <h2>Epidemics by University of Hong Kong</h2>
+            <p> <p>Skills you'll gain: <b>Epidemiology</b></p>
+            <p>The University of Hong Kong </p>
+        </div>
+    </a>
+    <a href="https://www.coursera.org/learn/covid-19">
+        <div class="service">
+            <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera-course-photos/34/068af22e1b46f78cae5f5b1e919ecc/Covid-19.png?auto=format%2Ccompress%2C%20enhance&dpr=1&w=265&h=216&q=50&fit=crop" alt="Ambulance">
+            <h2>Science Matters: <br>
+                Let's Talk About COVID-19</h2>
+            <p> <p>Skills you'll gain: <b>Epidemiology</b></p>
+            <p>Imperial College <br>London
+            </p>
+        </div>
+    </a>
+
+    </section>
+</body>
+<script>
+     function redirectToNextPage() {
+            // Display the loading page
+            document.getElementById('loading').style.display = 'block';
+
+            // Wait for a few seconds (you can adjust the duration as needed)
+            setTimeout(function() {
+                // Redirect to the next page
+                window.location.href = '/other_page';
+            }, 3000); // 3000 milliseconds = 3 seconds
+        }
+</script>
+</html>

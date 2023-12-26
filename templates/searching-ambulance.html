@@ -1,0 +1,103 @@
+<html>
+<head>
+<style>
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes dots {
+  0% {
+    content: "--";
+  }
+  20% {
+    content: "----------";
+  }
+  33% {
+    content: "--------------------";
+  }
+  50%{
+    content: "----------------------------------------";
+  }
+  66% {
+    content: "------------------------------------------------------------";
+  }
+  100% {
+    content: "--------";
+  }
+}
+
+h1 {
+  font-family: Arial, sans-serif;
+  font-size: 36px;
+  color: white;
+  text-align: center;
+  margin-top: 100px;
+}
+
+p {
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+  animation: slideInLeft 2s ease-in-out;
+}
+
+p:after {
+  content: "";
+  animation: dots 1s infinite;
+}
+
+body {
+  background: linear-gradient(to right, #1bdbb5, #16a085);
+}
+
+a:link {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+a:active {
+  text-decoration: none;
+  color: yellow;
+}
+</style>
+</head>
+<body>
+    <div class="container">
+
+        <h1>Searching for the nearby ambulances</h1>
+        <p></p>
+    </div>
+
+</body>
+<script>
+    function redirectToNextPage() {
+            setTimeout(function() {
+                // Redirect to the next page
+                window.location.href = '/call-ambulance';
+            }, 4000); // 3000 milliseconds = 3 seconds
+        }
+
+        // Call the function when the page loads
+        window.onload = function() {
+            redirectToNextPage();
+        };
+</script>
+</html>
+

@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>MediNep - All in one health solutions</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='img/heartbeat-solid.png') }}">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #root .rQfcdxdAd98I2u3wR_Xv ._M8cCug8H18ALQ05cNMt {
+            color: transparent;
+            }
+
+        #root .dQDNvqxeCXpZG5yOs9Ou ._M8cCug8H18ALQ05cNMt {
+            color: transparent;
+            }
+        #root .Ym5tIpCMz8al_AZ4Lk5y {
+            color: transparent;
+            }
+        #root .fnYLWljNnKAc9Ktb4mkv {
+            display: none;
+            }
+
+}
+
+    </style>
+    </head>
+<body>
+    <div id="root"></div> 
+</body>
+
+<script src="https://resource.zegocloud.com/prebuilt/crypto-js.js"></script>
+<script src="https://resource.zegocloud.com/prebuilt/prebuiltToken.js"></script>
+<script src="https://zegocloud.github.io/zegocloud_prebuilt_webrtc/ZegoPrebuilt/index.umd.js"></script>
+<script>
+
+const TOKEN = generatePrebuiltToken(3832020,"9bee53e3febb5cb92ede75ec2826efb0",'room2','UserID-' + Math.random(),'jack'+ Math.random());
+const zp = ZegoUIKitPrebuilt.create(TOKEN);
+zp.joinRoom({
+    container : document.querySelector("#root")
+}
+); 
+</script>
+</html>
