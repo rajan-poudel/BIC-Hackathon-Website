@@ -16,8 +16,8 @@ app.config.update(
 MAIL_SERVER = 'smtp.gmail.com',
 MAIL_PORT = 465,
 MAIL_USE_SSL = True,
-MAIL_USERNAME = 'rajanpoudel377@gmail.com',
-MAIL_PASSWORD = 'zfmgyaloizdmzopy'
+MAIL_USERNAME = '',
+MAIL_PASSWORD = ''
 )
 mail = Mail(app)
 
@@ -65,11 +65,10 @@ def signup():
         p
         assword = request.form.get('password')
 
-        url = """https://api.emailvalidation.io/v1/info?apikey=ema_live_DZSD4gt6BF34G60SlP1lBrLQGa6wt9RDCQo5EwrV&email="""+email
+        url = """ """+email
         res = requests.get(url)
         result = res.json()
 
-        #result = {'email': 'rajanpoudel.np@gmail.com', 'user': 'rajanpoudel.np', 'tag': '', 'domain': 'gmail.com', 'smtp_check': True, 'mx_found': True, 'did_you_mean': '', 'role': False, 'disposable': False, 'score': 0.64, 'state': 'deliverable', 'reason': 'valid_mailbox', 'free': True, 'format_valid': True, 'catch_all': None}
 
         smtp_check_value = result['smtp_check']
 
@@ -82,7 +81,7 @@ def signup():
                 session["name"] = name
                 session["email"] = email
                 session["password"] = password
-                mail.send_message('New message from ' + name ,sender="rajanpoudel377@gmail.com",recipients=[f"{email}"],body=message)
+                mail.send_message('New message from ' + name ,sender="",recipients=[f"{email}"],body=message)
                 return render_template("otp-verify.html")
             else:
                 flash("Email is already used :(","danger")
@@ -139,7 +138,6 @@ def payment():
 @app.route("/doctor",methods=['GET','POST'])
 def doctor():
     if 'email' in session and session['email']:
-        #mail.send_message('New message to doctor ', sender="rajanpoudel377@gmail.com",recipients=[f"rajanpoudel.np@gmail.com"],body="http://127.0.0.1:5000/doctor")
         return render_template("doctor.html")
     return redirect("/")
 
